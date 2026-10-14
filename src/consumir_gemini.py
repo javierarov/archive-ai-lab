@@ -12,6 +12,13 @@ from dotenv import load_dotenv
 
 
 def preparar_solicitud(texto):
+    
+    if not isinstance(texto, str):
+        raise ValueError("El contenido debe ser un texto.")
+
+    if not texto.strip():
+        raise ValueError("El texto no puede estar vacío.")
+
     datos = {
         "contents": [
             {
@@ -31,21 +38,48 @@ def preparar_solicitud(texto):
 
 
 
-def consultar_gemini(url, headers, datos):
-    respuesta = requests.post(
-        url,
-        headers=headers,
-        json=datos,
-        timeout=30
-    )
 
-    return respuesta
+def consultar_gemini(url, headers, datos):
+    try:
+        respuesta = requests.post(
+            url,
+            headers=headers,
+            json=datos,
+            timeout=30
+        )
+
+        respuesta.raise_for_status()
+
+        return respuesta
+
+    except requests.exceptions.Timeout:
+        print("ERROR: Gemini tardó demasiado en responder.")
+        return None
+
+    except requests.exceptions.ConnectionError:
+        print("ERROR: No se pudo establecer conexión con Gemini.")
+        return None
+
+    except requests.exceptions.HTTPError as error:
+        print("ERROR HTTP:", error)
+        return None
+
+
 
 
 def extraer_respuesta(resultado):
-    texto = resultado["candidates"][0]["content"]["parts"][0]["text"]
+    try:
+        texto = resultado["candidates"][0]["content"]["parts"][0]["text"]
 
-    return texto
+        if not isinstance(texto, str) or not texto.strip():
+            raise ValueError("Gemini devolvió un texto vacío o inválido.")
+
+        return texto
+
+    except (KeyError, IndexError, TypeError) as error:
+        raise ValueError(
+            "La respuesta de Gemini no tiene el formato esperado."
+        ) from error
 
 
 # Función principal
@@ -86,22 +120,32 @@ def main():
             "una exposición en Santiago de Chile."
         )
 
-        
+       
         # PASO 7: Enviar la solicitud
         respuesta = consultar_gemini(url, headers, datos)
 
+        if respuesta is None:
+            print("El análisis no pudo completarse.")
+            return
+
         print("Estado HTTP:", respuesta.status_code)
 
-        # PASO 8: Procesar la respuesta
-        resultado = respuesta.json()
+      
 
-        if respuesta.status_code == 200:
+        
+        # PASO 8: Procesar la respuesta
+        try:
+            resultado = respuesta.json()
             texto = extraer_respuesta(resultado)
+
             print("Respuesta de Gemini:")
             print(texto)
-        else:
-            print("Error de la API:")
-            print(resultado.get("error", {}).get("message", "Error desconocido"))
+
+        except ValueError as error:
+            print("ERROR al procesar la respuesta:")
+            print(error)
+
+
         
 
 if __name__ == "__main__":
