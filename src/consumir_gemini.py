@@ -82,6 +82,16 @@ def extraer_respuesta(resultado):
         ) from error
 
 
+def calcular_costo(uso, precio_entrada, precio_salida):
+    tokens_entrada = uso.get("promptTokenCount", 0)
+    tokens_salida = uso.get("candidatesTokenCount", 0)
+
+    costo_entrada = (tokens_entrada / 1_000_000) * precio_entrada
+    costo_salida = (tokens_salida / 1_000_000) * precio_salida
+
+    return costo_entrada + costo_salida
+
+
 # Función principal
 
 def main():
@@ -137,6 +147,11 @@ def main():
         try:
             resultado = respuesta.json()
             texto = extraer_respuesta(resultado)
+            uso = resultado.get("usageMetadata", {})
+
+            print("Tokens de entrada:", uso.get("promptTokenCount", "No disponible"))
+            print("Tokens de salida:", uso.get("candidatesTokenCount", "No disponible"))
+            print("Tokens totales:", uso.get("totalTokenCount", "No disponible"))
 
             print("Respuesta de Gemini:")
             print(texto)
@@ -144,6 +159,20 @@ def main():
         except ValueError as error:
             print("ERROR al procesar la respuesta:")
             print(error)
+
+            
+            # Tarifas hipotéticas para practicar
+            precio_entrada = 0.10
+            precio_salida = 0.40
+
+            costo = calcular_costo(
+                uso,
+                precio_entrada,
+                precio_salida
+            )
+
+            print(f"Costo estimado: US$ {costo:.8f}")
+
 
 
         
