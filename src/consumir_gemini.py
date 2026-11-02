@@ -11,32 +11,54 @@ from dotenv import load_dotenv
 
 import time
 
-
+import json
 
 def preparar_solicitud(texto):
-    
-    if not isinstance(texto, str):
-        raise ValueError("El contenido debe ser un texto.")
 
-    if not texto.strip():
+    if not isinstance(texto, str):
+        raise ValueError("El texto debe ser una cadena.")
+
+    texto = texto.strip()
+
+    if not texto:
         raise ValueError("El texto no puede estar vacío.")
 
-    datos = {
+    instrucciones = (
+        "Eres un asistente especializado en extracción de metadatos documentales. "
+        "Identifica únicamente la institución y la ciudad mencionadas explícitamente. "
+        "No agregues información que no aparezca en el texto. "
+        "Si falta algún dato, utiliza null. "
+        "Devuelve exclusivamente un objeto JSON válido."
+    )
+
+    return {
+        "systemInstruction": {
+            "parts": [
+                {"text": instrucciones}
+            ]
+        },
         "contents": [
             {
+                "role": "user",
                 "parts": [
-                    {
-                        "text": (
-                            "Identifica la institución y ciudad: "
-                            + texto
-                        )
-                    }
+                    {"text": texto}
                 ]
             }
-        ]
+        ],
+        "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": {
+                "type": "OBJECT",
+                "properties": {
+                    "institucion": {"type": "STRING", "nullable": True},
+                    "ciudad": {"type": "STRING", "nullable": True}
+                },
+                "required": ["institucion", "ciudad"]
+            }
+        }
     }
 
-    return datos
+
 
 
 
@@ -67,22 +89,45 @@ def consultar_gemini(url, headers, datos):
         return None
 
 
-
-
 def extraer_respuesta(resultado):
     try:
         texto = resultado["candidates"][0]["content"]["parts"][0]["text"]
-
-        if not isinstance(texto, str) or not texto.strip():
-            raise ValueError("Gemini devolvió un texto vacío o inválido.")
-
-        return texto
 
     except (KeyError, IndexError, TypeError) as error:
         raise ValueError(
             "La respuesta de Gemini no tiene el formato esperado."
         ) from error
 
+    if not isinstance(texto, str) or not texto.strip():
+        raise ValueError("Gemini devolvió un texto vacío o inválido.")
+
+    try:
+        datos = json.loads(texto)
+
+    except json.JSONDecodeError as error:
+        raise ValueError(
+            "Gemini no devolvió un JSON válido."
+        ) from error
+
+    if not isinstance(datos, dict):
+        raise ValueError("La respuesta JSON debe ser un objeto.")
+
+    campos_esperados = {"institucion", "ciudad"}
+
+    if set(datos.keys()) != campos_esperados:
+        raise ValueError(
+            "La respuesta JSON no contiene exactamente los campos esperados."
+        )
+
+    for campo in campos_esperados:
+        valor = datos[campo]
+
+        if valor is not None and not isinstance(valor, str):
+            raise ValueError(
+                f"El campo '{campo}' debe ser texto o null."
+            )
+
+    return datos
 
 def calcular_costo(uso, precio_entrada, precio_salida):
     tokens_entrada = uso.get("promptTokenCount", 0)
@@ -129,9 +174,11 @@ def main():
 
         # PASO 6: Preparar el contenido
         datos = preparar_solicitud(
-            "El Museo de Historia Natural inauguró "
-            "una exposición en Santiago de Chile."
-        )
+        "El Museo de Historia Natural inauguró "
+        "una exposición en Santiago de Chile."
+
+)
+
 
        
     
@@ -156,7 +203,7 @@ def main():
         # PASO 8: Procesar la respuesta
         try:
             resultado = respuesta.json()
-            texto = extraer_respuesta(resultado)
+            datos_extraidos = extraer_respuesta(resultado)
             uso = resultado.get("usageMetadata", {})
 
             print("Tokens de entrada:", uso.get("promptTokenCount", "No disponible"))
@@ -164,8 +211,8 @@ def main():
             print("Tokens de razonamiento:", uso.get("thoughtsTokenCount", 0))
             print("Tokens totales:", uso.get("totalTokenCount", "No disponible"))
 
-            print("Respuesta de Gemini:")
-            print(texto)
+            print("Respuesta estructurada de Gemini:")
+            print(json.dumps(datos_extraidos, ensure_ascii=False, indent=4))
 
         except ValueError as error:
             print("ERROR al procesar la respuesta:")
