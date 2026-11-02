@@ -9,6 +9,8 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+import time
+
 
 
 def preparar_solicitud(texto):
@@ -114,9 +116,10 @@ def main():
     else:
         # PASO 4: Definir el modelo
         url = (
-            "https://generativelanguage.googleapis.com/"
-        "v1beta/models/gemini-3.5-flash-lite:generateContent"
-        )
+                "https://generativelanguage.googleapis.com/"
+                "v1beta/models/gemini-3.5-flash-lite:generateContent"
+)
+    
 
         # PASO 5: Preparar los encabezados
         headers = {
@@ -131,15 +134,22 @@ def main():
         )
 
        
-        # PASO 7: Enviar la solicitud
+    
+       # PASO 7: Enviar la solicitud y medir latencia
+
+        inicio = time.perf_counter()
+
         respuesta = consultar_gemini(url, headers, datos)
+
+        fin = time.perf_counter()
+
+        latencia = fin - inicio
+
+        print(f"Latencia de la solicitud: {latencia:.2f} segundos")
 
         if respuesta is None:
             print("El análisis no pudo completarse.")
             return
-
-        print("Estado HTTP:", respuesta.status_code)
-
       
 
         
@@ -151,6 +161,7 @@ def main():
 
             print("Tokens de entrada:", uso.get("promptTokenCount", "No disponible"))
             print("Tokens de salida:", uso.get("candidatesTokenCount", "No disponible"))
+            print("Tokens de razonamiento:", uso.get("thoughtsTokenCount", 0))
             print("Tokens totales:", uso.get("totalTokenCount", "No disponible"))
 
             print("Respuesta de Gemini:")
