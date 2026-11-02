@@ -13,7 +13,7 @@ import time
 
 import json
 
-def preparar_solicitud(texto):
+def armar_peticion(texto):
 
     if not isinstance(texto, str):
         raise ValueError("El texto debe ser una cadena.")
@@ -63,7 +63,7 @@ def preparar_solicitud(texto):
 
 
 
-def consultar_gemini(url, headers, datos):
+def enviar_peticion(url, headers, datos):
     try:
         respuesta = requests.post(
             url,
@@ -89,7 +89,7 @@ def consultar_gemini(url, headers, datos):
         return None
 
 
-def extraer_respuesta(resultado):
+def extraer_texto(resultado):
     try:
         texto = resultado["candidates"][0]["content"]["parts"][0]["text"]
 
@@ -173,7 +173,7 @@ def main():
         }
 
         # PASO 6: Preparar el contenido
-        datos = preparar_solicitud(
+        datos = armar_peticion(
         "El Museo de Historia Natural inauguró "
         "una exposición en Santiago de Chile."
 
@@ -186,7 +186,7 @@ def main():
 
         inicio = time.perf_counter()
 
-        respuesta = consultar_gemini(url, headers, datos)
+        respuesta = enviar_peticion(url, headers, datos)
 
         fin = time.perf_counter()
 
@@ -203,7 +203,7 @@ def main():
         # PASO 8: Procesar la respuesta
         try:
             resultado = respuesta.json()
-            datos_extraidos = extraer_respuesta(resultado)
+            datos_extraidos = extraer_texto(resultado)
             uso = resultado.get("usageMetadata", {})
 
             print("Tokens de entrada:", uso.get("promptTokenCount", "No disponible"))
