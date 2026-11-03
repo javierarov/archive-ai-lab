@@ -2,3 +2,4 @@
 # Ejemplo (descomenta y ajusta según lo que uses):
 requests
 python-dotenv
+pytest
