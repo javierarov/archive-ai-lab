@@ -193,3 +193,92 @@ Se prevé continuar incorporando pruebas automatizadas, mejoras de configuració
 Licenciada en Gestión de Información, Bibliotecología y Archivística.
 
 Proyecto de aprendizaje orientado a la integración de inteligencia artificial generativa en procesos de gestión documental.
+
+## Cliente modular de consumo de APIs
+
+Archive AI Lab incorpora un cliente modular para consumir
+la API de Gemini, con mecanismos de recuperación ante
+errores temporales.
+
+El módulo se encuentra en `src/cliente.py`.
+
+### Funcionalidades
+
+- Clasificación de errores HTTP.
+- Gestión de errores de autenticación.
+- Reintentos automáticos ante errores temporales.
+- Backoff exponencial.
+- Límite máximo de espera entre reintentos.
+- Registro de tokens consumidos.
+- Cálculo de costos estimados por operación.
+- Extracción de metadatos documentales en JSON.
+
+### Funciones principales
+
+| Función | Descripción |
+|---|---|
+| `enviar_peticion()` | Realiza solicitudes HTTP a Gemini. |
+| `con_reintento()` | Gestiona reintentos y backoff exponencial. |
+| `registrar_costo()` | Registra tokens y costos estimados. |
+| `consultar_modelo()` | Coordina el procesamiento completo. |
+
+### Ejemplo de uso
+
+Desde la raíz del proyecto, con el entorno virtual
+activado y GEMINI_API_KEY configurada:
+
+```python
+# Ejecutar desde la raíz con PYTHONPATH=src
+from cliente import consultar_modelo
+
+resultado = consultar_modelo(
+    "El Museo de Historia Natural se encuentra en Santiago de Chile."
+)
+
+print(resultado)
+```
+
+La función devuelve los metadatos extraídos cuando la
+solicitud y la validación se completan correctamente.
+
+### Pruebas automatizadas
+
+Las pruebas se encuentran en:
+
+`tests/test_cliente.py`
+
+Para instalar las dependencias:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Para ejecutar todas las pruebas:
+
+```bash
+python -m pytest -v
+```
+
+La batería inicial contiene 30 casos que comprueban:
+
+- Respuestas HTTP exitosas.
+- Errores de autenticación.
+- Errores temporales y permanentes.
+- Reintentos y agotamiento de intentos.
+- Backoff exponencial y límites de espera.
+- Registro de tokens y costos.
+- Integración de consultas mediante mocks.
+
+Las pruebas utilizan respuestas simuladas y no requieren
+realizar solicitudes reales a Gemini.
+
+### Consideraciones
+
+Los costos calculados utilizan tarifas de ejemplo y no
+representan necesariamente la facturación del proveedor.
+
+El historial de consumo se conserva en memoria durante
+la ejecución del programa.
+
+Los resultados de las pruebas automatizadas no garantizan
+la disponibilidad del servicio externo.
