@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "entrada": "El Museo de Historia Natural está en Santiago de Chile.",
+    "referencia": {
+      "institucion": "Museo de Historia Natural",
+      "ciudad": "Santiago de Chile"
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo de Historia Natural",
+      "ciudad": "Santiago"
+    },
+    "f1": 0.8333,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "parcial",
+      "contradiccion": "no",
+      "observaciones": "La ciudad fue abreviada de Santiago de Chile a Santiago.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 2,
+    "entrada": "La Biblioteca Nacional organiza una exposición en Santiago.",
+    "referencia": {
+      "institucion": "Biblioteca Nacional",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca Nacional",
+      "ciudad": "Santiago"
+    },
+    "f1": 1.0,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "si",
+      "contradiccion": "no",
+      "observaciones": "La respuesta coincide exactamente con la referencia.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 6,
+    "entrada": "La Biblioteca de Santiago organizó una jornada cultural.",
+    "referencia": {
+      "institucion": "Biblioteca de Santiago",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca de Santiago",
+      "ciudad": "Santiago"
+    },
+    "f1": 0.8571,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "no",
+      "contradiccion": "no",
+      "observaciones": "Se extrajo Santiago desde el nombre Biblioteca de Santiago.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 10,
+    "entrada": "El Archivo Nacional recibió documentos históricos en Santiago.",
+    "referencia": {
+      "institucion": "Archivo Nacional",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Archivo Nacional",
+      "ciudad": "Santiago"
+    },
+    "f1": 1.0,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "si",
+      "contradiccion": "no",
+      "observaciones": "La respuesta coincide exactamente con la referencia.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 12,
+    "entrada": "El Museo de Historia Natural de Concepción organizó una actividad.",
+    "referencia": {
+      "institucion": "Museo de Historia Natural de Concepción",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo de Historia Natural de Concepción",
+      "ciudad": "Concepción"
+    },
+    "f1": 0.9231,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "no",
+      "contradiccion": "no",
+      "observaciones": "Se extrajo Concepción desde el nombre de la institución.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 13,
+    "entrada": "La Biblioteca Municipal de Valparaíso presentó una colección.",
+    "referencia": {
+      "institucion": "Biblioteca Municipal de Valparaíso",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca Municipal",
+      "ciudad": "Valparaíso"
+    },
+    "f1": 0.8571,
+    "revision_humana": {
+      "correccion_factual": "parcial",
+      "completitud": "no",
+      "contradiccion": "no",
+      "observaciones": "Se separó Valparaíso del nombre Biblioteca Municipal de Valparaíso.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 17,
+    "entrada": "La Biblioteca Nacional y el Archivo Nacional participaron en Santiago.",
+    "referencia": {
+      "institucion": null,
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca Nacional y Archivo Nacional",
+      "ciudad": "Santiago"
+    },
+    "f1": 0.2857,
+    "revision_humana": {
+      "correccion_factual": "parcial",
+      "completitud": "no",
+      "contradiccion": "no",
+      "observaciones": "Se agruparon dos instituciones en un único campo.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 18,
+    "entrada": "La Universidad de Concepción organizó actividades en Chillán y Concepción.",
+    "referencia": {
+      "institucion": "Universidad de Concepción",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Universidad de Concepción",
+      "ciudad": "Chillán"
+    },
+    "f1": 0.8571,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "no",
+      "contradiccion": "no",
+      "observaciones": "Se seleccionó Chillán pese a existir dos ciudades mencionadas.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 19,
+    "entrada": "El Centro Cultural Gabriela Mistral presentó una obra en Santiago.",
+    "referencia": {
+      "institucion": "Centro Cultural Gabriela Mistral",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Centro Cultural Gabriela Mistral",
+      "ciudad": "Santiago"
+    },
+    "f1": 1.0,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "si",
+      "contradiccion": "no",
+      "observaciones": "La respuesta coincide exactamente con la referencia.",
+      "estado": "validado"
+    }
+  },
+  {
+    "id": 20,
+    "entrada": "Durante la jornada se discutieron nuevas estrategias de conservación documental.",
+    "referencia": {
+      "institucion": null,
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": null,
+      "ciudad": null
+    },
+    "f1": 0.0,
+    "revision_humana": {
+      "correccion_factual": "si",
+      "completitud": "si",
+      "contradiccion": "no",
+      "observaciones": "La respuesta contiene correctamente dos valores nulos, pero F1 es cero.",
+      "estado": "validado"
+    }
+  }
+]
