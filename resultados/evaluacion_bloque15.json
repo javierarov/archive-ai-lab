@@ -1,0 +1,553 @@
+[
+  {
+    "id": 1,
+    "entrada": "El Museo de Historia Natural está en Santiago de Chile.",
+    "referencia": {
+      "institucion": "Museo de Historia Natural",
+      "ciudad": "Santiago de Chile"
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo de Historia Natural",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Museo de Historia Natural Santiago de Chile",
+    "texto_respuesta": "Museo de Historia Natural Santiago",
+    "coincidencia_cruda": false,
+    "tokens_referencia": [
+      "museo",
+      "de",
+      "historia",
+      "natural",
+      "santiago",
+      "de",
+      "chile"
+    ],
+    "tokens_respuesta": [
+      "museo",
+      "de",
+      "historia",
+      "natural",
+      "santiago"
+    ],
+    "coincidencia_procesada": false
+  },
+  {
+    "id": 2,
+    "entrada": "La Biblioteca Nacional organiza una exposición en Santiago.",
+    "referencia": {
+      "institucion": "Biblioteca Nacional",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca Nacional",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Biblioteca Nacional Santiago",
+    "texto_respuesta": "Biblioteca Nacional Santiago",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "biblioteca",
+      "nacional",
+      "santiago"
+    ],
+    "tokens_respuesta": [
+      "biblioteca",
+      "nacional",
+      "santiago"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 3,
+    "entrada": "La Universidad de Concepción inauguró una exposición en Concepción.",
+    "referencia": {
+      "institucion": "Universidad de Concepción",
+      "ciudad": "Concepción"
+    },
+    "respuesta_modelo": {
+      "institucion": "Universidad de Concepción",
+      "ciudad": "Concepción"
+    },
+    "texto_referencia": "Universidad de Concepción Concepción",
+    "texto_respuesta": "Universidad de Concepción Concepción",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "universidad",
+      "de",
+      "concepción",
+      "concepción"
+    ],
+    "tokens_respuesta": [
+      "universidad",
+      "de",
+      "concepción",
+      "concepción"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 4,
+    "entrada": "El Museo Regional de Magallanes está ubicado en Punta Arenas.",
+    "referencia": {
+      "institucion": "Museo Regional de Magallanes",
+      "ciudad": "Punta Arenas"
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo Regional de Magallanes",
+      "ciudad": "Punta Arenas"
+    },
+    "texto_referencia": "Museo Regional de Magallanes Punta Arenas",
+    "texto_respuesta": "Museo Regional de Magallanes Punta Arenas",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "museo",
+      "regional",
+      "de",
+      "magallanes",
+      "punta",
+      "arenas"
+    ],
+    "tokens_respuesta": [
+      "museo",
+      "regional",
+      "de",
+      "magallanes",
+      "punta",
+      "arenas"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 5,
+    "entrada": "La Universidad Austral de Chile realizó una actividad en Valdivia.",
+    "referencia": {
+      "institucion": "Universidad Austral de Chile",
+      "ciudad": "Valdivia"
+    },
+    "respuesta_modelo": {
+      "institucion": "Universidad Austral de Chile",
+      "ciudad": "Valdivia"
+    },
+    "texto_referencia": "Universidad Austral de Chile Valdivia",
+    "texto_respuesta": "Universidad Austral de Chile Valdivia",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "universidad",
+      "austral",
+      "de",
+      "chile",
+      "valdivia"
+    ],
+    "tokens_respuesta": [
+      "universidad",
+      "austral",
+      "de",
+      "chile",
+      "valdivia"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 6,
+    "entrada": "La Biblioteca de Santiago organizó una jornada cultural.",
+    "referencia": {
+      "institucion": "Biblioteca de Santiago",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca de Santiago",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Biblioteca de Santiago",
+    "texto_respuesta": "Biblioteca de Santiago Santiago",
+    "coincidencia_cruda": false,
+    "tokens_referencia": [
+      "biblioteca",
+      "de",
+      "santiago"
+    ],
+    "tokens_respuesta": [
+      "biblioteca",
+      "de",
+      "santiago",
+      "santiago"
+    ],
+    "coincidencia_procesada": false
+  },
+  {
+    "id": 7,
+    "entrada": "En Temuco se realizó una exposición de fotografía histórica.",
+    "referencia": {
+      "institucion": null,
+      "ciudad": "Temuco"
+    },
+    "respuesta_modelo": {
+      "institucion": null,
+      "ciudad": "Temuco"
+    },
+    "texto_referencia": "Temuco",
+    "texto_respuesta": "Temuco",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "temuco"
+    ],
+    "tokens_respuesta": [
+      "temuco"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 8,
+    "entrada": "El Museo de Arte Contemporáneo anunció una nueva exposición.",
+    "referencia": {
+      "institucion": "Museo de Arte Contemporáneo",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo de Arte Contemporáneo",
+      "ciudad": null
+    },
+    "texto_referencia": "Museo de Arte Contemporáneo",
+    "texto_respuesta": "Museo de Arte Contemporáneo",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "museo",
+      "de",
+      "arte",
+      "contemporáneo"
+    ],
+    "tokens_respuesta": [
+      "museo",
+      "de",
+      "arte",
+      "contemporáneo"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 9,
+    "entrada": "La Universidad de La Frontera presentó un proyecto en Temuco.",
+    "referencia": {
+      "institucion": "Universidad de La Frontera",
+      "ciudad": "Temuco"
+    },
+    "respuesta_modelo": {
+      "institucion": "Universidad de La Frontera",
+      "ciudad": "Temuco"
+    },
+    "texto_referencia": "Universidad de La Frontera Temuco",
+    "texto_respuesta": "Universidad de La Frontera Temuco",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "universidad",
+      "de",
+      "la",
+      "frontera",
+      "temuco"
+    ],
+    "tokens_respuesta": [
+      "universidad",
+      "de",
+      "la",
+      "frontera",
+      "temuco"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 10,
+    "entrada": "El Archivo Nacional recibió documentos históricos en Santiago.",
+    "referencia": {
+      "institucion": "Archivo Nacional",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Archivo Nacional",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Archivo Nacional Santiago",
+    "texto_respuesta": "Archivo Nacional Santiago",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "archivo",
+      "nacional",
+      "santiago"
+    ],
+    "tokens_respuesta": [
+      "archivo",
+      "nacional",
+      "santiago"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 11,
+    "entrada": "En Concepción se inauguró una muestra sobre la historia regional.",
+    "referencia": {
+      "institucion": null,
+      "ciudad": "Concepción"
+    },
+    "respuesta_modelo": {
+      "institucion": null,
+      "ciudad": "Concepción"
+    },
+    "texto_referencia": "Concepción",
+    "texto_respuesta": "Concepción",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "concepción"
+    ],
+    "tokens_respuesta": [
+      "concepción"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 12,
+    "entrada": "El Museo de Historia Natural de Concepción organizó una actividad.",
+    "referencia": {
+      "institucion": "Museo de Historia Natural de Concepción",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo de Historia Natural de Concepción",
+      "ciudad": "Concepción"
+    },
+    "texto_referencia": "Museo de Historia Natural de Concepción",
+    "texto_respuesta": "Museo de Historia Natural de Concepción Concepción",
+    "coincidencia_cruda": false,
+    "tokens_referencia": [
+      "museo",
+      "de",
+      "historia",
+      "natural",
+      "de",
+      "concepción"
+    ],
+    "tokens_respuesta": [
+      "museo",
+      "de",
+      "historia",
+      "natural",
+      "de",
+      "concepción",
+      "concepción"
+    ],
+    "coincidencia_procesada": false
+  },
+  {
+    "id": 13,
+    "entrada": "La Biblioteca Municipal de Valparaíso presentó una colección.",
+    "referencia": {
+      "institucion": "Biblioteca Municipal de Valparaíso",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca Municipal",
+      "ciudad": "Valparaíso"
+    },
+    "texto_referencia": "Biblioteca Municipal de Valparaíso",
+    "texto_respuesta": "Biblioteca Municipal Valparaíso",
+    "coincidencia_cruda": false,
+    "tokens_referencia": [
+      "biblioteca",
+      "municipal",
+      "de",
+      "valparaíso"
+    ],
+    "tokens_respuesta": [
+      "biblioteca",
+      "municipal",
+      "valparaíso"
+    ],
+    "coincidencia_procesada": false
+  },
+  {
+    "id": 14,
+    "entrada": "El Museo Histórico Nacional realizó una charla en Santiago.",
+    "referencia": {
+      "institucion": "Museo Histórico Nacional",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo Histórico Nacional",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Museo Histórico Nacional Santiago",
+    "texto_respuesta": "Museo Histórico Nacional Santiago",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "museo",
+      "histórico",
+      "nacional",
+      "santiago"
+    ],
+    "tokens_respuesta": [
+      "museo",
+      "histórico",
+      "nacional",
+      "santiago"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 15,
+    "entrada": "La Universidad de Chile participó en un encuentro en Valparaíso.",
+    "referencia": {
+      "institucion": "Universidad de Chile",
+      "ciudad": "Valparaíso"
+    },
+    "respuesta_modelo": {
+      "institucion": "Universidad de Chile",
+      "ciudad": "Valparaíso"
+    },
+    "texto_referencia": "Universidad de Chile Valparaíso",
+    "texto_respuesta": "Universidad de Chile Valparaíso",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "universidad",
+      "de",
+      "chile",
+      "valparaíso"
+    ],
+    "tokens_respuesta": [
+      "universidad",
+      "de",
+      "chile",
+      "valparaíso"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 16,
+    "entrada": "El Museo Regional de Atacama presentó una exposición en Copiapó.",
+    "referencia": {
+      "institucion": "Museo Regional de Atacama",
+      "ciudad": "Copiapó"
+    },
+    "respuesta_modelo": {
+      "institucion": "Museo Regional de Atacama",
+      "ciudad": "Copiapó"
+    },
+    "texto_referencia": "Museo Regional de Atacama Copiapó",
+    "texto_respuesta": "Museo Regional de Atacama Copiapó",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "museo",
+      "regional",
+      "de",
+      "atacama",
+      "copiapó"
+    ],
+    "tokens_respuesta": [
+      "museo",
+      "regional",
+      "de",
+      "atacama",
+      "copiapó"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 17,
+    "entrada": "La Biblioteca Nacional y el Archivo Nacional participaron en Santiago.",
+    "referencia": {
+      "institucion": null,
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Biblioteca Nacional y Archivo Nacional",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Santiago",
+    "texto_respuesta": "Biblioteca Nacional y Archivo Nacional Santiago",
+    "coincidencia_cruda": false,
+    "tokens_referencia": [
+      "santiago"
+    ],
+    "tokens_respuesta": [
+      "biblioteca",
+      "nacional",
+      "y",
+      "archivo",
+      "nacional",
+      "santiago"
+    ],
+    "coincidencia_procesada": false
+  },
+  {
+    "id": 18,
+    "entrada": "La Universidad de Concepción organizó actividades en Chillán y Concepción.",
+    "referencia": {
+      "institucion": "Universidad de Concepción",
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": "Universidad de Concepción",
+      "ciudad": "Chillán"
+    },
+    "texto_referencia": "Universidad de Concepción",
+    "texto_respuesta": "Universidad de Concepción Chillán",
+    "coincidencia_cruda": false,
+    "tokens_referencia": [
+      "universidad",
+      "de",
+      "concepción"
+    ],
+    "tokens_respuesta": [
+      "universidad",
+      "de",
+      "concepción",
+      "chillán"
+    ],
+    "coincidencia_procesada": false
+  },
+  {
+    "id": 19,
+    "entrada": "El Centro Cultural Gabriela Mistral presentó una obra en Santiago.",
+    "referencia": {
+      "institucion": "Centro Cultural Gabriela Mistral",
+      "ciudad": "Santiago"
+    },
+    "respuesta_modelo": {
+      "institucion": "Centro Cultural Gabriela Mistral",
+      "ciudad": "Santiago"
+    },
+    "texto_referencia": "Centro Cultural Gabriela Mistral Santiago",
+    "texto_respuesta": "Centro Cultural Gabriela Mistral Santiago",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [
+      "centro",
+      "cultural",
+      "gabriela",
+      "mistral",
+      "santiago"
+    ],
+    "tokens_respuesta": [
+      "centro",
+      "cultural",
+      "gabriela",
+      "mistral",
+      "santiago"
+    ],
+    "coincidencia_procesada": true
+  },
+  {
+    "id": 20,
+    "entrada": "Durante la jornada se discutieron nuevas estrategias de conservación documental.",
+    "referencia": {
+      "institucion": null,
+      "ciudad": null
+    },
+    "respuesta_modelo": {
+      "institucion": null,
+      "ciudad": null
+    },
+    "texto_referencia": "",
+    "texto_respuesta": "",
+    "coincidencia_cruda": true,
+    "tokens_referencia": [],
+    "tokens_respuesta": [],
+    "coincidencia_procesada": true
+  }
+]
