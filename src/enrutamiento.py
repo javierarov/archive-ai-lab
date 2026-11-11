@@ -1,4 +1,6 @@
+import logging
 
+from langchain_core.runnables import RunnableLambda
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableBranch, RunnablePassthrough
@@ -87,9 +89,14 @@ def construir_cadena(modelo):
             "ni asegures que el problema será resuelto.\n\n"
             "Queja:\n{mensaje}"
         )
+
+
         | modelo
         | StrOutputParser()
     )
+
+    cadena_queja = construir_cadena_queja_segura(cadena_queja)
+
 
     cadena_sugerencia = (
         PromptTemplate.from_template(
@@ -113,3 +120,52 @@ def construir_cadena(modelo):
         cadena_sugerencia=cadena_sugerencia,
         cadena_pregunta=cadena_pregunta,
     )
+
+
+
+
+# BLOQUE 20: MANEJO DE ERRORES
+
+logger = logging.getLogger(__name__)
+
+
+RESPUESTA_ERROR_GENERAL = (
+    "No pudimos procesar tu mensaje en este momento. "
+    "Intenta nuevamente más tarde."
+)
+
+
+def construir_cadena_queja_segura(cadena_queja):
+    """
+    Protege la ruta de quejas con una respuesta alternativa
+    cuando el procesamiento principal lanza una excepción.
+    """
+
+    respuesta_alternativa = RunnableLambda(
+        lambda entrada: (
+            "No fue posible procesar tu consulta en este momento. "
+            "Puedes conservar el identificador del documento y "
+            "el mensaje de error para intentar nuevamente o "
+            "consultar los canales oficiales de soporte."
+        )
+    )
+
+    return cadena_queja.with_fallbacks(
+        [respuesta_alternativa]
+    )
+
+
+def procesar_mensaje_seguro(cadena, mensaje):
+    """
+    Ejecuta el flujo y captura errores no controlados.
+    """
+
+    try:
+        return cadena.invoke({"mensaje": mensaje})
+
+    except Exception:
+        logger.exception(
+            "Error no controlado durante el procesamiento del mensaje"
+        )
+
+        return RESPUESTA_ERROR_GENERAL
