@@ -5,3 +5,4 @@ python-dotenv
 pytest
 langchain
 langchain-google-genai
+langchain-classic==1.0.8
