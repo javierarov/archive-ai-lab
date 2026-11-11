@@ -1,0 +1,21 @@
+[
+  {
+    "tipo": "pregunta",
+    "mensaje": "?C?mo puedo solicitar acceso a documentos hist?ricos digitalizados?",
+    "respuesta": "Para solicitar acceso a documentos hist?ricos digitalizados, el procedimiento general depende de la instituci?n que resguarde el fondo documental.\n\nSe recomienda identificar el archivo custodio, revisar su cat?logo en l?nea y comprobar los requisitos de acceso. Si el documento no est? disponible p?blicamente, corresponde consultar el procedimiento oficial de solicitud de la instituci?n.",
+    "estado": "exitoso",
+    "nota": "Respuesta resumida manualmente a partir de la primera ejecuci?n real de Gemini."
+  },
+  {
+    "tipo": "queja",
+    "mensaje": "No puedo recuperar un documento desde el catálogo digital.",
+    "respuesta": "Estimado/a usuario/a,\n\nLamentamos mucho los inconvenientes que está experimentando al intentar recuperar su documento en nuestro catálogo digital. Comprendemos perfectamente la frustración que esto genera, especialmente cuando necesita acceder a la información de manera oportuna.\n\nPara poder ayudarle a resolver esta incidencia lo antes posible, ¿sería tan amable de proporcionarnos algunos detalles adicionales? Nos sería de gran utilidad conocer:\n\n* El título o número de referencia del documento que busca.\n* El mensaje de error exacto que le aparece en pantalla (si aplica).\n* El navegador o dispositivo que está utilizando.\n\nUna vez que nos comparta esta información, nuestro equipo técnico revisará el estado del registro en el sistema para indicarle el procedimiento exacto y lograr que pueda acceder a su documento.\n\nQuedamos a la espera de sus comentarios para darle seguimiento a su caso.\n\nAtentamente,  \n[Nombre de la institución o departamento]",
+    "estado": "exitoso"
+  },
+  {
+    "tipo": "sugerencia",
+    "mensaje": "Sería útil incorporar filtros por fecha e institución en el buscador.",
+    "respuesta": "¡Muchasทราบ y agradecemos sinceramente esta sugerencia! La incorporación de filtros por fecha e institución en el buscador de nuestros servicios documentales es una propuesta muy acertada que sin duda aportará valor, facilitando y agilizando la localización de la información.\n\nPara determinar la viabilidad y el alcance de esta mejora, planeamos evaluarla mediante el siguiente proceso:\n\n1. **Análisis de viabilidad técnica:** Revisaremos la estructura actual de metadatos y la indexación de los repositorios documentales para comprobar si los campos de \"fecha\" e \"institución\" están normalizados y listos para ser consultados mediante filtros.\n2. **Evaluación de impacto en la experiencia de usuario (UX):** Diseñaremos maquetas preliminares de la interfaz de búsqueda para asegurar que la adición de estos nuevos filtros mantenga el diseño limpio, intuitivo y fácil de usar, sin saturar la pantalla.\n3. **Pruebas de rendimiento:** Estimaremos cómo el procesamiento de estas nuevas consultas puede afectar la velocidad de respuesta del buscador, garantizando que el sistema mantenga su eficiencia.\n\nTomaremos muy en cuenta esta propuesta para incluirla en la hoja de ruta de futuras actualizaciones del sistema documental. ¡Gracias por ayudarnos a mejorar!",
+    "estado": "exitoso"
+  }
+]
