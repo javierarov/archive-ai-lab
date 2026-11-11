@@ -5,7 +5,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-from src.enrutamiento import construir_cadena
+from src.enrutamiento import (
+    RESPUESTA_ERROR_GENERAL,
+    construir_cadena,
+    procesar_mensaje_seguro,
+)
 
 
 RUTA_RESULTADOS = Path("resultados/enrutamiento_bloque19.json")
@@ -85,15 +89,22 @@ def main():
         print(f"\nPROBANDO: {tipo.upper()}", flush=True)
 
         try:
-            respuesta = cadena.invoke({
-                "mensaje": mensaje
-            })
+            respuesta = procesar_mensaje_seguro(
+                cadena,
+                mensaje,
+            )
+
+            es_error_general = respuesta == RESPUESTA_ERROR_GENERAL
 
             nuevo_resultado = {
                 "tipo": tipo,
                 "mensaje": mensaje,
                 "respuesta": respuesta,
-                "estado": "exitoso"
+                "estado": (
+                    "error_controlado"
+                    if es_error_general
+                    else "exitoso"
+                )
             }
 
             resultados = [
