@@ -3,3 +3,5 @@
 requests
 python-dotenv
 pytest
+langchain
+langchain-google-genai
