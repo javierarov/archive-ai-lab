@@ -6,3 +6,6 @@ pytest
 langchain
 langchain-google-genai
 langchain-classic==1.0.8
+langchain-chroma==1.1.0
+chromadb==1.5.9
+langchain-text-splitters==1.1.3
