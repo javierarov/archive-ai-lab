@@ -1,0 +1,275 @@
+{
+  "fecha_utc": "2026-11-16T11:54:53.360470+00:00",
+  "modelo": "models/gemini-embedding-001",
+  "coleccion": "archive_ai_bloque24",
+  "fragmentos_indexados": 10,
+  "total_preguntas": 11,
+  "criterio_relevancia": "Etiquetas manuales previas a la recuperación",
+  "resultados": [
+    {
+      "pregunta": "Que metadatos descriptivos permiten identificar un documento?",
+      "ids_relevantes": [
+        "bloque24-001"
+      ],
+      "ids_recuperados": [
+        "bloque24-001",
+        "bloque24-002",
+        "bloque24-007",
+        "bloque24-008",
+        "bloque24-009"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Como facilitan los metadatos el acceso a los documentos?",
+      "ids_relevantes": [
+        "bloque24-002"
+      ],
+      "ids_recuperados": [
+        "bloque24-002",
+        "bloque24-001",
+        "bloque24-006",
+        "bloque24-008",
+        "bloque24-007"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Que condiciones ambientales deben controlarse para conservar documentos?",
+      "ids_relevantes": [
+        "bloque24-003"
+      ],
+      "ids_recuperados": [
+        "bloque24-003",
+        "bloque24-004",
+        "bloque24-007",
+        "bloque24-009",
+        "bloque24-002"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Como disminuir la exposicion de documentos a agentes de dano?",
+      "ids_relevantes": [
+        "bloque24-004"
+      ],
+      "ids_recuperados": [
+        "bloque24-004",
+        "bloque24-003",
+        "bloque24-002",
+        "bloque24-009",
+        "bloque24-007"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Que aporta la digitalizacion de archivos audiovisuales?",
+      "ids_relevantes": [
+        "bloque24-005"
+      ],
+      "ids_recuperados": [
+        "bloque24-005",
+        "bloque24-002",
+        "bloque24-006",
+        "bloque24-004",
+        "bloque24-001"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Que controles necesita la preservacion de archivos audiovisuales digitales?",
+      "ids_relevantes": [
+        "bloque24-006"
+      ],
+      "ids_recuperados": [
+        "bloque24-005",
+        "bloque24-004",
+        "bloque24-006",
+        "bloque24-003",
+        "bloque24-002"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Como se organizan los documentos segun funciones y series?",
+      "ids_relevantes": [
+        "bloque24-007"
+      ],
+      "ids_recuperados": [
+        "bloque24-007",
+        "bloque24-002",
+        "bloque24-001",
+        "bloque24-009",
+        "bloque24-003"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Para que sirven los vocabularios controlados en la recuperacion documental?",
+      "ids_relevantes": [
+        "bloque24-008"
+      ],
+      "ids_recuperados": [
+        "bloque24-008",
+        "bloque24-002",
+        "bloque24-007",
+        "bloque24-001",
+        "bloque24-006"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Que responsabilidades establece la gobernanza de la informacion?",
+      "ids_relevantes": [
+        "bloque24-009"
+      ],
+      "ids_recuperados": [
+        "bloque24-009",
+        "bloque24-010",
+        "bloque24-006",
+        "bloque24-008",
+        "bloque24-007"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Como se auditan los cambios realizados sobre los documentos?",
+      "ids_relevantes": [
+        "bloque24-010"
+      ],
+      "ids_recuperados": [
+        "bloque24-010",
+        "bloque24-009",
+        "bloque24-002",
+        "bloque24-006",
+        "bloque24-007"
+      ],
+      "k3": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "k5": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.33333333333333337
+      }
+    },
+    {
+      "pregunta": "Cual es el presupuesto anual del Archivo Nacional para 2027?",
+      "ids_relevantes": [],
+      "ids_recuperados": [
+        "bloque24-005",
+        "bloque24-004",
+        "bloque24-006",
+        "bloque24-002",
+        "bloque24-001"
+      ],
+      "k3": {
+        "precision": 0.0,
+        "recall": null,
+        "f1": null
+      },
+      "k5": {
+        "precision": 0.0,
+        "recall": null,
+        "f1": null
+      }
+    }
+  ],
+  "promedios": {
+    "k3": {
+      "k": 3,
+      "precision": 0.303030303030303,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    "k5": {
+      "k": 5,
+      "precision": 0.18181818181818182,
+      "recall": 1.0,
+      "f1": 0.33333333333333337
+    }
+  }
+}
