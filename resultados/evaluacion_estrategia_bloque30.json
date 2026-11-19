@@ -1,0 +1,193 @@
+{
+  "bloque": 30,
+  "proyecto": "Archive AI Lab",
+  "modulo": "MEEP",
+  "caso": "CITD",
+  "estado_decision": "provisional",
+  "respuestas": {
+    "informacion_cambia_seguido": false,
+    "problema_de_formato_o_tono": true,
+    "dataset_grande_y_de_calidad": false,
+    "presupuesto_limitado_o_iterar_rapido": true,
+    "necesita_multiples_variantes": false
+  },
+  "evidencia": {
+    "informacion_cambia_seguido": {
+      "estado": "supuesto",
+      "detalle": "Cinco tipologias documentales relativamente estables."
+    },
+    "problema_de_formato_o_tono": {
+      "estado": "hipotesis_no_medida",
+      "detalle": "Se busca consistencia JSON. Falta evaluar 20 respuestas reales."
+    },
+    "dataset_grande_y_de_calidad": {
+      "estado": "verificado",
+      "detalle": "50 ejemplos sinteticos. Umbral orientativo: 200 ejemplos. Calidad semantica pendiente."
+    },
+    "presupuesto_limitado_o_iterar_rapido": {
+      "estado": "supuesto_de_planificacion",
+      "detalle": "Se prioriza experimentacion de bajo costo."
+    },
+    "necesita_multiples_variantes": {
+      "estado": "alcance_actual",
+      "detalle": "Un unico clasificador documental."
+    }
+  },
+  "puntos": {
+    "RAG": 2,
+    "Fine-tuning completo": 1,
+    "PEFT": 3
+  },
+  "candidatas": [
+    "PEFT"
+  ],
+  "sensibilidad": [
+    {
+      "criterio": "informacion_cambia_seguido",
+      "valor_original": false,
+      "valor_alternativo": true,
+      "puntos_originales": {
+        "RAG": 2,
+        "Fine-tuning completo": 1,
+        "PEFT": 3
+      },
+      "puntos_alternativos": {
+        "RAG": 5,
+        "Fine-tuning completo": 1,
+        "PEFT": 3
+      },
+      "ganadoras": [
+        "RAG"
+      ],
+      "cambia_resultado": true
+    },
+    {
+      "criterio": "problema_de_formato_o_tono",
+      "valor_original": true,
+      "valor_alternativo": false,
+      "puntos_originales": {
+        "RAG": 2,
+        "Fine-tuning completo": 1,
+        "PEFT": 3
+      },
+      "puntos_alternativos": {
+        "RAG": 2,
+        "Fine-tuning completo": 0,
+        "PEFT": 1
+      },
+      "ganadoras": [
+        "RAG"
+      ],
+      "cambia_resultado": true
+    },
+    {
+      "criterio": "dataset_grande_y_de_calidad",
+      "valor_original": false,
+      "valor_alternativo": true,
+      "puntos_originales": {
+        "RAG": 2,
+        "Fine-tuning completo": 1,
+        "PEFT": 3
+      },
+      "puntos_alternativos": {
+        "RAG": 2,
+        "Fine-tuning completo": 3,
+        "PEFT": 4
+      },
+      "ganadoras": [
+        "PEFT"
+      ],
+      "cambia_resultado": false
+    },
+    {
+      "criterio": "presupuesto_limitado_o_iterar_rapido",
+      "valor_original": true,
+      "valor_alternativo": false,
+      "puntos_originales": {
+        "RAG": 2,
+        "Fine-tuning completo": 1,
+        "PEFT": 3
+      },
+      "puntos_alternativos": {
+        "RAG": 0,
+        "Fine-tuning completo": 1,
+        "PEFT": 2
+      },
+      "ganadoras": [
+        "PEFT"
+      ],
+      "cambia_resultado": false
+    },
+    {
+      "criterio": "necesita_multiples_variantes",
+      "valor_original": false,
+      "valor_alternativo": true,
+      "puntos_originales": {
+        "RAG": 2,
+        "Fine-tuning completo": 1,
+        "PEFT": 3
+      },
+      "puntos_alternativos": {
+        "RAG": 2,
+        "Fine-tuning completo": 1,
+        "PEFT": 5
+      },
+      "ganadoras": [
+        "PEFT"
+      ],
+      "cambia_resultado": false
+    }
+  ],
+  "escenario_sin_problema_de_formato": {
+    "respuestas": {
+      "informacion_cambia_seguido": false,
+      "problema_de_formato_o_tono": false,
+      "dataset_grande_y_de_calidad": false,
+      "presupuesto_limitado_o_iterar_rapido": true,
+      "necesita_multiples_variantes": false
+    },
+    "puntos": {
+      "RAG": 2,
+      "Fine-tuning completo": 0,
+      "PEFT": 1
+    },
+    "candidatas": [
+      "RAG"
+    ]
+  },
+  "dataset": {
+    "ejemplos_actuales": 50,
+    "objetivo_orientativo": 200,
+    "ejemplos_faltantes": 150
+  },
+  "costos_hipoteticos": {
+    "tarifa_hora_clp": 15000,
+    "minutos_por_ejemplo": 5,
+    "porcentaje_revision": 0.2,
+    "minutos_revision": 2,
+    "dataset_actual": {
+      "ejemplos": 50,
+      "horas_etiquetado": 4.17,
+      "horas_revision": 0.33,
+      "horas_totales": 4.5,
+      "costo_estimado_clp": 67500.0
+    },
+    "dataset_objetivo": {
+      "ejemplos": 200,
+      "horas_etiquetado": 16.67,
+      "horas_revision": 1.33,
+      "horas_totales": 18.0,
+      "costo_estimado_clp": 270000.0
+    },
+    "ampliacion": {
+      "ejemplos": 150,
+      "horas_etiquetado": 12.5,
+      "horas_revision": 1.0,
+      "horas_totales": 13.5,
+      "costo_estimado_clp": 202500.0
+    }
+  },
+  "entrenamiento_ejecutado": false,
+  "llamadas_api": 0,
+  "costo_api_usd": 0.0
+}

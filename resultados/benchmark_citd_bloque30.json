@@ -1,0 +1,2146 @@
+{
+  "modelo": "qwen2.5:1.5b",
+  "casos_por_experimento": 20,
+  "llamadas_gemini": 0,
+  "costo_api_externa_usd": 0.0,
+  "entrenamiento_ejecutado": false,
+  "experimentos": {
+    "A": {
+      "configuracion": {
+        "nombre": "Zero-shot",
+        "few_shot": false,
+        "json_restringido": false
+      },
+      "registros": [
+        {
+          "id": "baseline-001",
+          "texto": "Estimada senora: le escribo para solicitar la devolucion de las fotografias facilitadas para la exposicion. Reciba un cordial saludo.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 6084.82,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-002",
+          "texto": "Querido profesor: quisiera agradecerle personalmente los materiales que envio para nuestra investigacion.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2954.94,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-003",
+          "texto": "Distinguido director: me permito invitarle a la inauguracion de nuestra biblioteca. Esperamos contar con su presencia.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}\n```",
+          "latencia_ms": 2872.99,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-004",
+          "texto": "De mi consideracion: deseo manifestar mi preocupacion por el cierre del museo y solicitar antecedentes al respecto.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}\n```",
+          "latencia_ms": 2874.92,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-005",
+          "texto": "A las nueve horas se constituyo la mesa de trabajo. Se aprobaron dos propuestas y se registro una abstencion.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2925.37,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-006",
+          "texto": "Los representantes de ambas instituciones dejan constancia de la recepcion conforme de quince unidades de almacenamiento.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"acta\",\n  \"categoria\": \"constancia documental\"\n}\n```",
+          "latencia_ms": 2856.4,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": false,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "acta",
+            "categoria_predicha": "constancia documental"
+          }
+        },
+        {
+          "id": "baseline-007",
+          "texto": "En presencia de los asistentes se procedio a la lectura de los acuerdos anteriores. No se formularon observaciones.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2969.33,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-008",
+          "texto": "Concluida la votacion, se registro el resultado y se levanto la sesion a las dieciocho horas.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2912.98,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-009",
+          "texto": "En uso de las atribuciones que confiere la ley, se dispone la clausura temporal del recinto municipal.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2924.39,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-010",
+          "texto": "Considerando los antecedentes expuestos y las facultades legales de esta autoridad, se ordena la creacion de una nueva unidad.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2952.54,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-011",
+          "texto": "Apruebase la asignacion presupuestaria para el programa de restauracion. Anotese, comuniquese y archivese.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2887.29,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-012",
+          "texto": "La autoridad comunal, en ejercicio de sus atribuciones legales, establece el nuevo horario de atencion publica.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"decreto\",\n  \"categoria\": \"acto administrativo\"\n}\n```",
+          "latencia_ms": 2896.48,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": false,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-013",
+          "texto": "La inspeccion de cincuenta cajas revelo presencia de hongos en doce unidades. Se recomienda su aislamiento.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Comunicacion\"\n}\n```",
+          "latencia_ms": 2850.27,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-014",
+          "texto": "El analisis comparativo evidencia una disminucion del tiempo de respuesta tras incorporar el nuevo sistema.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"analisis y evaluacion\"\n}\n```",
+          "latencia_ms": 2920.86,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": false,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-015",
+          "texto": "Los resultados de las encuestas muestran que el acceso remoto es la modalidad preferida por los investigadores.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"analisis y evaluacion\"\n}\n```",
+          "latencia_ms": 2874.59,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": false,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-016",
+          "texto": "Se examinaron las condiciones de seguridad del deposito y se identificaron cuatro deficiencias de infraestructura.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"analisis y evaluacion\"\n}\n```",
+          "latencia_ms": 2864.28,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": false,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-017",
+          "texto": "De: Recursos Humanos. Para: Departamento Tecnico. Remitir las solicitudes de vacaciones antes del viernes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}\n```",
+          "latencia_ms": 2933.9,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-018",
+          "texto": "A todo el personal administrativo: actualizar las contrasenas institucionales antes del cierre de mes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}\n```",
+          "latencia_ms": 2854.08,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-019",
+          "texto": "De: Direccion. Para: Unidad de Finanzas. Asunto: Entrega de antecedentes internos para la revision presupuestaria.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Comunicacion\"\n}\n```",
+          "latencia_ms": 2884.12,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-020",
+          "texto": "Se comunica al equipo interno que las reuniones de coordinacion se realizaran los dias martes desde la proxima semana.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "```json\n{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}\n```",
+          "latencia_ms": 2875.31,
+          "evaluacion_estricta": {
+            "json_valido": false,
+            "esquema_valido": false,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": null,
+            "categoria_predicha": null
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        }
+      ],
+      "metricas": {
+        "evaluacion_estricta": {
+          "json_valido": {
+            "correctos": 0,
+            "total": 20,
+            "porcentaje": 0.0
+          },
+          "esquema_valido": {
+            "correctos": 0,
+            "total": 20,
+            "porcentaje": 0.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 0,
+            "total": 20,
+            "porcentaje": 0.0
+          },
+          "categoria_consistente": {
+            "correctos": 0,
+            "total": 20,
+            "porcentaje": 0.0
+          },
+          "respuesta_correcta": {
+            "correctos": 0,
+            "total": 20,
+            "porcentaje": 0.0
+          }
+        },
+        "evaluacion_recuperada": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 15,
+            "total": 20,
+            "porcentaje": 75.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 9,
+            "total": 20,
+            "porcentaje": 45.0
+          },
+          "categoria_consistente": {
+            "correctos": 9,
+            "total": 20,
+            "porcentaje": 45.0
+          },
+          "respuesta_correcta": {
+            "correctos": 1,
+            "total": 20,
+            "porcentaje": 5.0
+          }
+        }
+      },
+      "predicciones": {
+        "memorando": 13,
+        "acta": 1,
+        "decreto": 1,
+        "informe": 5
+      },
+      "incumplimientos_formato": 20,
+      "problema_de_formato_o_tono": true,
+      "latencia_promedio_ms": 3058.49
+    },
+    "B": {
+      "configuracion": {
+        "nombre": "Few-shot",
+        "few_shot": true,
+        "json_restringido": false
+      },
+      "registros": [
+        {
+          "id": "baseline-001",
+          "texto": "Estimada senora: le escribo para solicitar la devolucion de las fotografias facilitadas para la exposicion. Reciba un cordial saludo.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"carta\", \"categoria\": \"Comunicacion\"}",
+          "latencia_ms": 5977.08,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-002",
+          "texto": "Querido profesor: quisiera agradecerle personalmente los materiales que envio para nuestra investigacion.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"carta\", \"categoria\": \"Comunicacion\"}",
+          "latencia_ms": 2701.34,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-003",
+          "texto": "Distinguido director: me permito invitarle a la inauguracion de nuestra biblioteca. Esperamos contar con su presencia.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"carta\", \"categoria\": \"Comunicacion\"}",
+          "latencia_ms": 2671.26,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-004",
+          "texto": "De mi consideracion: deseo manifestar mi preocupacion por el cierre del museo y solicitar antecedentes al respecto.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2761.2,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-005",
+          "texto": "A las nueve horas se constituyo la mesa de trabajo. Se aprobaron dos propuestas y se registro una abstencion.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2837.06,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-006",
+          "texto": "Los representantes de ambas instituciones dejan constancia de la recepcion conforme de quince unidades de almacenamiento.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2788.26,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-007",
+          "texto": "En presencia de los asistentes se procedio a la lectura de los acuerdos anteriores. No se formularon observaciones.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2775.36,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-008",
+          "texto": "Concluida la votacion, se registro el resultado y se levanto la sesion a las dieciocho horas.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2771.39,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-009",
+          "texto": "En uso de las atribuciones que confiere la ley, se dispone la clausura temporal del recinto municipal.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"decreto\", \"categoria\": \"Acto administrativo\"}",
+          "latencia_ms": 2748.15,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-010",
+          "texto": "Considerando los antecedentes expuestos y las facultades legales de esta autoridad, se ordena la creacion de una nueva unidad.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"decreto\", \"categoria\": \"Acto administrativo\"}",
+          "latencia_ms": 2756.78,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-011",
+          "texto": "Apruebase la asignacion presupuestaria para el programa de restauracion. Anotese, comuniquese y archivese.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2817.74,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-012",
+          "texto": "La autoridad comunal, en ejercicio de sus atribuciones legales, establece el nuevo horario de atencion publica.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"decreto\", \"categoria\": \"Acto administrativo\"}",
+          "latencia_ms": 2770.42,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-013",
+          "texto": "La inspeccion de cincuenta cajas revelo presencia de hongos en doce unidades. Se recomienda su aislamiento.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2779.63,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-014",
+          "texto": "El analisis comparativo evidencia una disminucion del tiempo de respuesta tras incorporar el nuevo sistema.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2723.22,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-015",
+          "texto": "Los resultados de las encuestas muestran que el acceso remoto es la modalidad preferida por los investigadores.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2720.33,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-016",
+          "texto": "Se examinaron las condiciones de seguridad del deposito y se identificaron cuatro deficiencias de infraestructura.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2710.26,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-017",
+          "texto": "De: Recursos Humanos. Para: Departamento Tecnico. Remitir las solicitudes de vacaciones antes del viernes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2771.92,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-018",
+          "texto": "A todo el personal administrativo: actualizar las contrasenas institucionales antes del cierre de mes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2721.82,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-019",
+          "texto": "De: Direccion. Para: Unidad de Finanzas. Asunto: Entrega de antecedentes internos para la revision presupuestaria.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2746.14,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-020",
+          "texto": "Se comunica al equipo interno que las reuniones de coordinacion se realizaran los dias martes desde la proxima semana.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2785.54,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        }
+      ],
+      "metricas": {
+        "evaluacion_estricta": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          },
+          "categoria_consistente": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "respuesta_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          }
+        },
+        "evaluacion_recuperada": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          },
+          "categoria_consistente": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "respuesta_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          }
+        }
+      },
+      "predicciones": {
+        "carta": 3,
+        "memorando": 8,
+        "informe": 6,
+        "decreto": 3
+      },
+      "incumplimientos_formato": 0,
+      "problema_de_formato_o_tono": false,
+      "latencia_promedio_ms": 2916.74
+    },
+    "C": {
+      "configuracion": {
+        "nombre": "Zero-shot + JSON Schema",
+        "few_shot": false,
+        "json_restringido": true
+      },
+      "registros": [
+        {
+          "id": "baseline-001",
+          "texto": "Estimada senora: le escribo para solicitar la devolucion de las fotografias facilitadas para la exposicion. Reciba un cordial saludo.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 3192.45,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-002",
+          "texto": "Querido profesor: quisiera agradecerle personalmente los materiales que envio para nuestra investigacion.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2970.46,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-003",
+          "texto": "Distinguido director: me permito invitarle a la inauguracion de nuestra biblioteca. Esperamos contar con su presencia.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 2842.88,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-004",
+          "texto": "De mi consideracion: deseo manifestar mi preocupacion por el cierre del museo y solicitar antecedentes al respecto.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 2862.35,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-005",
+          "texto": "A las nueve horas se constituyo la mesa de trabajo. Se aprobaron dos propuestas y se registro una abstencion.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2904.01,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-006",
+          "texto": "Los representantes de ambas instituciones dejan constancia de la recepcion conforme de quince unidades de almacenamiento.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\n  \"tipologia\": \"acta\",\n  \"categoria\": \"Constancia documental\"\n}",
+          "latencia_ms": 2865.03,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "acta",
+            "categoria_predicha": "Constancia documental"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "acta",
+            "categoria_predicha": "Constancia documental"
+          }
+        },
+        {
+          "id": "baseline-007",
+          "texto": "En presencia de los asistentes se procedio a la lectura de los acuerdos anteriores. No se formularon observaciones.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 2885.01,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-008",
+          "texto": "Concluida la votacion, se registro el resultado y se levanto la sesion a las dieciocho horas.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2822.16,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-009",
+          "texto": "En uso de las atribuciones que confiere la ley, se dispone la clausura temporal del recinto municipal.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2849.39,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-010",
+          "texto": "Considerando los antecedentes expuestos y las facultades legales de esta autoridad, se ordena la creacion de una nueva unidad.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2915.67,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-011",
+          "texto": "Apruebase la asignacion presupuestaria para el programa de restauracion. Anotese, comuniquese y archivese.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2950.43,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-012",
+          "texto": "La autoridad comunal, en ejercicio de sus atribuciones legales, establece el nuevo horario de atencion publica.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\n  \"tipologia\": \"decreto\",\n  \"categoria\": \"Acto administrativo\"\n}",
+          "latencia_ms": 2875.87,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-013",
+          "texto": "La inspeccion de cincuenta cajas revelo presencia de hongos en doce unidades. Se recomienda su aislamiento.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Analisis y evaluacion\"\n}",
+          "latencia_ms": 2884.29,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-014",
+          "texto": "El analisis comparativo evidencia una disminucion del tiempo de respuesta tras incorporar el nuevo sistema.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Analisis y evaluacion\"\n}",
+          "latencia_ms": 2925.47,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-015",
+          "texto": "Los resultados de las encuestas muestran que el acceso remoto es la modalidad preferida por los investigadores.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Analisis y evaluacion\"\n}",
+          "latencia_ms": 2968.51,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-016",
+          "texto": "Se examinaron las condiciones de seguridad del deposito y se identificaron cuatro deficiencias de infraestructura.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Analisis y evaluacion\"\n}",
+          "latencia_ms": 2898.21,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-017",
+          "texto": "De: Recursos Humanos. Para: Departamento Tecnico. Remitir las solicitudes de vacaciones antes del viernes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion interna\"\n}",
+          "latencia_ms": 2859.98,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-018",
+          "texto": "A todo el personal administrativo: actualizar las contrasenas institucionales antes del cierre de mes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\n  \"tipologia\": \"memorando\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 2767.89,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": false,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-019",
+          "texto": "De: Direccion. Para: Unidad de Finanzas. Asunto: Entrega de antecedentes internos para la revision presupuestaria.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\n  \"tipologia\": \"informe\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 2844.45,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": false,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-020",
+          "texto": "Se comunica al equipo interno que las reuniones de coordinacion se realizaran los dias martes desde la proxima semana.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\n  \"tipologia\": \"carta\",\n  \"categoria\": \"Comunicacion\"\n}",
+          "latencia_ms": 2844.27,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        }
+      ],
+      "metricas": {
+        "evaluacion_estricta": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 8,
+            "total": 20,
+            "porcentaje": 40.0
+          },
+          "categoria_consistente": {
+            "correctos": 14,
+            "total": 20,
+            "porcentaje": 70.0
+          },
+          "respuesta_correcta": {
+            "correctos": 7,
+            "total": 20,
+            "porcentaje": 35.0
+          }
+        },
+        "evaluacion_recuperada": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 8,
+            "total": 20,
+            "porcentaje": 40.0
+          },
+          "categoria_consistente": {
+            "correctos": 14,
+            "total": 20,
+            "porcentaje": 70.0
+          },
+          "respuesta_correcta": {
+            "correctos": 7,
+            "total": 20,
+            "porcentaje": 35.0
+          }
+        }
+      },
+      "predicciones": {
+        "memorando": 11,
+        "acta": 1,
+        "informe": 6,
+        "decreto": 1,
+        "carta": 1
+      },
+      "incumplimientos_formato": 0,
+      "problema_de_formato_o_tono": false,
+      "latencia_promedio_ms": 2896.44
+    },
+    "D": {
+      "configuracion": {
+        "nombre": "Few-shot + JSON Schema",
+        "few_shot": true,
+        "json_restringido": true
+      },
+      "registros": [
+        {
+          "id": "baseline-001",
+          "texto": "Estimada senora: le escribo para solicitar la devolucion de las fotografias facilitadas para la exposicion. Reciba un cordial saludo.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"carta\", \"categoria\": \"Comunicacion\"}",
+          "latencia_ms": 2783.3,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-002",
+          "texto": "Querido profesor: quisiera agradecerle personalmente los materiales que envio para nuestra investigacion.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"carta\", \"categoria\": \"Comunicacion\"}",
+          "latencia_ms": 2693.77,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-003",
+          "texto": "Distinguido director: me permito invitarle a la inauguracion de nuestra biblioteca. Esperamos contar con su presencia.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"carta\", \"categoria\": \"Comunicacion\"}",
+          "latencia_ms": 2682.25,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "carta",
+            "categoria_predicha": "Comunicacion"
+          }
+        },
+        {
+          "id": "baseline-004",
+          "texto": "De mi consideracion: deseo manifestar mi preocupacion por el cierre del museo y solicitar antecedentes al respecto.",
+          "tipologia_esperada": "carta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2813.43,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-005",
+          "texto": "A las nueve horas se constituyo la mesa de trabajo. Se aprobaron dos propuestas y se registro una abstencion.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2755.28,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-006",
+          "texto": "Los representantes de ambas instituciones dejan constancia de la recepcion conforme de quince unidades de almacenamiento.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2755.68,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-007",
+          "texto": "En presencia de los asistentes se procedio a la lectura de los acuerdos anteriores. No se formularon observaciones.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2765.09,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-008",
+          "texto": "Concluida la votacion, se registro el resultado y se levanto la sesion a las dieciocho horas.",
+          "tipologia_esperada": "acta",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2763.16,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-009",
+          "texto": "En uso de las atribuciones que confiere la ley, se dispone la clausura temporal del recinto municipal.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"decreto\", \"categoria\": \"Acto administrativo\"}",
+          "latencia_ms": 2695.06,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-010",
+          "texto": "Considerando los antecedentes expuestos y las facultades legales de esta autoridad, se ordena la creacion de una nueva unidad.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"decreto\", \"categoria\": \"Acto administrativo\"}",
+          "latencia_ms": 2763.53,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-011",
+          "texto": "Apruebase la asignacion presupuestaria para el programa de restauracion. Anotese, comuniquese y archivese.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2756.54,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-012",
+          "texto": "La autoridad comunal, en ejercicio de sus atribuciones legales, establece el nuevo horario de atencion publica.",
+          "tipologia_esperada": "decreto",
+          "respuesta_original": "{\"tipologia\": \"decreto\", \"categoria\": \"Acto administrativo\"}",
+          "latencia_ms": 2711.37,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "decreto",
+            "categoria_predicha": "Acto administrativo"
+          }
+        },
+        {
+          "id": "baseline-013",
+          "texto": "La inspeccion de cincuenta cajas revelo presencia de hongos en doce unidades. Se recomienda su aislamiento.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2975.16,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-014",
+          "texto": "El analisis comparativo evidencia una disminucion del tiempo de respuesta tras incorporar el nuevo sistema.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2898.69,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-015",
+          "texto": "Los resultados de las encuestas muestran que el acceso remoto es la modalidad preferida por los investigadores.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2862.47,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-016",
+          "texto": "Se examinaron las condiciones de seguridad del deposito y se identificaron cuatro deficiencias de infraestructura.",
+          "tipologia_esperada": "informe",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2855.37,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-017",
+          "texto": "De: Recursos Humanos. Para: Departamento Tecnico. Remitir las solicitudes de vacaciones antes del viernes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2858.74,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-018",
+          "texto": "A todo el personal administrativo: actualizar las contrasenas institucionales antes del cierre de mes.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2806.01,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        },
+        {
+          "id": "baseline-019",
+          "texto": "De: Direccion. Para: Unidad de Finanzas. Asunto: Entrega de antecedentes internos para la revision presupuestaria.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"informe\", \"categoria\": \"Analisis y evaluacion\"}",
+          "latencia_ms": 2825.94,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": false,
+            "categoria_consistente": true,
+            "tipologia_predicha": "informe",
+            "categoria_predicha": "Analisis y evaluacion"
+          }
+        },
+        {
+          "id": "baseline-020",
+          "texto": "Se comunica al equipo interno que las reuniones de coordinacion se realizaran los dias martes desde la proxima semana.",
+          "tipologia_esperada": "memorando",
+          "respuesta_original": "{\"tipologia\": \"memorando\", \"categoria\": \"Comunicacion interna\"}",
+          "latencia_ms": 2762.86,
+          "evaluacion_estricta": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          },
+          "evaluacion_recuperada": {
+            "json_valido": true,
+            "esquema_valido": true,
+            "clasificacion_correcta": true,
+            "categoria_consistente": true,
+            "tipologia_predicha": "memorando",
+            "categoria_predicha": "Comunicacion interna"
+          }
+        }
+      ],
+      "metricas": {
+        "evaluacion_estricta": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          },
+          "categoria_consistente": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "respuesta_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          }
+        },
+        "evaluacion_recuperada": {
+          "json_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "esquema_valido": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "clasificacion_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          },
+          "categoria_consistente": {
+            "correctos": 20,
+            "total": 20,
+            "porcentaje": 100.0
+          },
+          "respuesta_correcta": {
+            "correctos": 13,
+            "total": 20,
+            "porcentaje": 65.0
+          }
+        }
+      },
+      "predicciones": {
+        "carta": 3,
+        "memorando": 8,
+        "informe": 6,
+        "decreto": 3
+      },
+      "incumplimientos_formato": 0,
+      "problema_de_formato_o_tono": false,
+      "latencia_promedio_ms": 2789.18
+    }
+  }
+}
