@@ -1,0 +1,911 @@
+{
+  "bloque": 30,
+  "proyecto": "Archive AI Lab",
+  "modulo": "CITD",
+  "modelo": "qwen2.5:1.5b",
+  "clases": [
+    "carta",
+    "acta",
+    "decreto",
+    "informe",
+    "memorando"
+  ],
+  "fuente": "benchmark_citd_bloque30.json",
+  "nuevas_consultas": 0,
+  "entrenamiento_ejecutado": false,
+  "costo_api_externa_usd": 0.0,
+  "experimentos": {
+    "A": {
+      "nombre": "Zero-shot",
+      "evaluacion_estricta": {
+        "total": 20,
+        "aciertos": 0,
+        "accuracy": 0.0,
+        "sin_prediccion": 20,
+        "macro_avg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0
+        },
+        "weighted_avg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "acta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "decreto": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "informe": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "memorando": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 0,
+            "sin_prediccion": 4
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 0,
+            "sin_prediccion": 4
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 0,
+            "sin_prediccion": 4
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 0,
+            "sin_prediccion": 4
+          },
+          "memorando": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 0,
+            "sin_prediccion": 4
+          }
+        }
+      },
+      "evaluacion_recuperada": {
+        "total": 20,
+        "aciertos": 9,
+        "accuracy": 0.45,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.6061538461538462,
+          "recall": 0.45,
+          "f1_score": 0.4083660130718954
+        },
+        "weighted_avg": {
+          "precision": 0.6061538461538462,
+          "recall": 0.45,
+          "f1_score": 0.4083660130718954
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "acta": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4
+          },
+          "decreto": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 0,
+            "tn": 15,
+            "support": 4,
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1_score": 0.888888888888889
+          },
+          "memorando": {
+            "tp": 3,
+            "fp": 10,
+            "fn": 1,
+            "tn": 6,
+            "support": 4,
+            "precision": 0.23076923076923078,
+            "recall": 0.75,
+            "f1_score": 0.3529411764705882
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 4,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 1,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 1,
+            "informe": 0,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          }
+        }
+      }
+    },
+    "B": {
+      "nombre": "Few-shot",
+      "evaluacion_estricta": {
+        "total": 20,
+        "aciertos": 13,
+        "accuracy": 0.65,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "weighted_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "acta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "decreto": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "tn": 14,
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8
+          },
+          "memorando": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 1,
+            "tn": 11,
+            "support": 4,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1_score": 0.5
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 3,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 3,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          }
+        }
+      },
+      "evaluacion_recuperada": {
+        "total": 20,
+        "aciertos": 13,
+        "accuracy": 0.65,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "weighted_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "acta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "decreto": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "tn": 14,
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8
+          },
+          "memorando": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 1,
+            "tn": 11,
+            "support": 4,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1_score": 0.5
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 3,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 3,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          }
+        }
+      }
+    },
+    "C": {
+      "nombre": "Zero-shot + JSON Schema",
+      "evaluacion_estricta": {
+        "total": 20,
+        "aciertos": 8,
+        "accuracy": 0.4,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.5696969696969697,
+          "recall": 0.4,
+          "f1_score": 0.37333333333333335
+        },
+        "weighted_avg": {
+          "precision": 0.5696969696969697,
+          "recall": 0.4,
+          "f1_score": 0.37333333333333335
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 4,
+            "tn": 15,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "acta": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4
+          },
+          "decreto": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "tn": 14,
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8
+          },
+          "memorando": {
+            "tp": 2,
+            "fp": 9,
+            "fn": 2,
+            "tn": 7,
+            "support": 4,
+            "precision": 0.18181818181818182,
+            "recall": 0.5,
+            "f1_score": 0.26666666666666666
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 4,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 1,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 2,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 1,
+            "informe": 0,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 1,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 2,
+            "sin_prediccion": 0
+          }
+        }
+      },
+      "evaluacion_recuperada": {
+        "total": 20,
+        "aciertos": 8,
+        "accuracy": 0.4,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.5696969696969697,
+          "recall": 0.4,
+          "f1_score": 0.37333333333333335
+        },
+        "weighted_avg": {
+          "precision": 0.5696969696969697,
+          "recall": 0.4,
+          "f1_score": 0.37333333333333335
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 4,
+            "tn": 15,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "acta": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4
+          },
+          "decreto": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 3,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1_score": 0.4
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "tn": 14,
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8
+          },
+          "memorando": {
+            "tp": 2,
+            "fp": 9,
+            "fn": 2,
+            "tn": 7,
+            "support": 4,
+            "precision": 0.18181818181818182,
+            "recall": 0.5,
+            "f1_score": 0.26666666666666666
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 4,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 1,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 2,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 1,
+            "informe": 0,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 1,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 2,
+            "sin_prediccion": 0
+          }
+        }
+      }
+    },
+    "D": {
+      "nombre": "Few-shot + JSON Schema",
+      "evaluacion_estricta": {
+        "total": 20,
+        "aciertos": 13,
+        "accuracy": 0.65,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "weighted_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "acta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "decreto": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "tn": 14,
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8
+          },
+          "memorando": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 1,
+            "tn": 11,
+            "support": 4,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1_score": 0.5
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 3,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 3,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          }
+        }
+      },
+      "evaluacion_recuperada": {
+        "total": 20,
+        "aciertos": 13,
+        "accuracy": 0.65,
+        "sin_prediccion": 0,
+        "macro_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "weighted_avg": {
+          "precision": 0.6083333333333333,
+          "recall": 0.65,
+          "f1_score": 0.6028571428571429
+        },
+        "por_clase": {
+          "carta": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "acta": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "tn": 16,
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0
+          },
+          "decreto": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "tn": 16,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1_score": 0.8571428571428571
+          },
+          "informe": {
+            "tp": 4,
+            "fp": 2,
+            "fn": 0,
+            "tn": 14,
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1_score": 0.8
+          },
+          "memorando": {
+            "tp": 3,
+            "fp": 5,
+            "fn": 1,
+            "tn": 11,
+            "support": 4,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1_score": 0.5
+          }
+        },
+        "matriz_confusion": {
+          "carta": {
+            "carta": 3,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "acta": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          },
+          "decreto": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 3,
+            "informe": 0,
+            "memorando": 1,
+            "sin_prediccion": 0
+          },
+          "informe": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 4,
+            "memorando": 0,
+            "sin_prediccion": 0
+          },
+          "memorando": {
+            "carta": 0,
+            "acta": 0,
+            "decreto": 0,
+            "informe": 1,
+            "memorando": 3,
+            "sin_prediccion": 0
+          }
+        }
+      }
+    }
+  }
+}
