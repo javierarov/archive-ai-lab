@@ -1,0 +1,41 @@
+{
+  "bloque": 29,
+  "proyecto": "Archive AI Lab",
+  "modulo": "CITD",
+  "nombre_modelo_propuesto": "citd-archive-ai-lab-v1",
+  "modalidad": "dry_run",
+  "modelo_base": null,
+  "entrenamiento_ejecutado": false,
+  "modelo_entrenado_disponible": false,
+  "llamadas_api": 0,
+  "costo_api_usd": 0.0,
+  "datos_sinteticos": true,
+  "dataset": {
+    "total_ejemplos": 50,
+    "entrenamiento": 40,
+    "evaluacion_reservada": 10,
+    "tipologias": [
+      "carta",
+      "acta",
+      "decreto",
+      "informe",
+      "memorando"
+    ],
+    "semilla": 42
+  },
+  "configuracion_peft": {
+    "tuned_model_display_name": "citd-archive-ai-lab-v1",
+    "epoch_count": 5,
+    "adapter_size": "ADAPTER_SIZE_FOUR",
+    "tuning_mode": "TUNING_MODE_PEFT_ADAPTER"
+  },
+  "exposiciones_teoricas_a_ejemplos": 200,
+  "limitaciones": [
+    "Dataset sintetico de tamano reducido.",
+    "No se ha realizado entrenamiento remoto.",
+    "No existen metricas de clasificacion.",
+    "Modelo base pendiente de seleccion.",
+    "Disponibilidad del servicio de tuning no verificada.",
+    "Compatible localmente con los tipos del SDK."
+  ]
+}
